@@ -1,6 +1,6 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import MyComponent from './components/component1';
+import { createRoot } from 'react-dom/client';
 
 export default function Test() {
     return (
@@ -11,4 +11,6 @@ export default function Test() {
     )
 }
 
-ReactDOM.render(<Test />, document.getElementById('root'));
+const container = document.createElement('div');
+document.body.appendChild(container);
+createRoot(container!).render(<Test />);
