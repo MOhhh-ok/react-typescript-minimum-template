@@ -1,3 +1,3 @@
-This is a sample of React with Typescript using no framework.
+# React - Typescript minimum template
 
-Multi entrypoint for flexible usage.
+This is a simple template of React - Typescript with no framework.

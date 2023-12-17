@@ -1,12 +1,6 @@
 module.exports = {
     mode: 'development',
-    entry: {
-        root1: './src/root1.tsx',
-        root2: './src/root2.tsx'
-    },
-    output: {
-        filename: '[name].js',
-    },
+    entry: './src/main.tsx',
     module: {
         rules: [
             {
