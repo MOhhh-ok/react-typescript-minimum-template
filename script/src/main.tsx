@@ -1,11 +1,45 @@
 import React from 'react';
 import { createRoot } from "react-dom/client"
+import Component1 from './components/Component1';
+import Component2 from './components/Component2';
 
-export default function Main() {
+
+/* Load single sample ---------------------------------------------------------------- */
+
+function Main() {
     return <div>Main</div>
 }
 
-const container = document.createElement('div');
-document.body.appendChild(container);
-createRoot(container!).render(<Main />);
 
+const mainContainer = document.querySelector('react-main');
+if (mainContainer) {
+    createRoot(mainContainer).render(<Main />);
+}
+
+
+/* Load multiple sample ------------------------------------------------------------ */
+
+type ClassComponent = {
+    className: string,
+    Component: React.ComponentType<any>,
+};
+
+const classComponents: ClassComponent[] = [
+    // This item load element like <div class="component1" data-props="{}"></div>
+    {
+        className: '.component1',
+        Component: Component1,
+    },
+    {
+        className: '.component2',
+        Component: Component2,
+    },
+]
+
+classComponents.forEach(({ className, Component }) => {
+    const containers = document.querySelectorAll(className);
+    containers.forEach(async container => {
+        const props = JSON.parse(container.getAttribute('data-props')!);
+        createRoot(container).render(<Component {...props} />);
+    });
+});

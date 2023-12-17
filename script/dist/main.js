@@ -80,13 +80,33 @@ eval("\n\nif (false) {} else {\n  module.exports = __webpack_require__(/*! ./cjs
 
 /***/ }),
 
+/***/ "./src/components/Component1.tsx":
+/*!***************************************!*\
+  !*** ./src/components/Component1.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Component1)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Component1() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Component1\");\n}\n\n\n//# sourceURL=webpack:///./src/components/Component1.tsx?");
+
+/***/ }),
+
+/***/ "./src/components/Component2.tsx":
+/*!***************************************!*\
+  !*** ./src/components/Component2.tsx ***!
+  \***************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Component1)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\nfunction Component1() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Component2\");\n}\n\n\n//# sourceURL=webpack:///./src/components/Component2.tsx?");
+
+/***/ }),
+
 /***/ "./src/main.tsx":
 /*!**********************!*\
   !*** ./src/main.tsx ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Main)\n/* harmony export */ });\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n\n\nfunction Main() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Main\");\n}\nvar container = document.createElement('div');\ndocument.body.appendChild(container);\n(0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container).render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Main, null));\n\n\n//# sourceURL=webpack:///./src/main.tsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom/client */ \"./node_modules/react-dom/client.js\");\n/* harmony import */ var _components_Component1__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/Component1 */ \"./src/components/Component1.tsx\");\n/* harmony import */ var _components_Component2__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/Component2 */ \"./src/components/Component2.tsx\");\n\n\n\n\n/* Load single sample ---------------------------------------------------------------- */\nfunction Main() {\n    return react__WEBPACK_IMPORTED_MODULE_0___default().createElement(\"div\", null, \"Main\");\n}\nconst mainContainer = document.querySelector('react-main');\nif (mainContainer) {\n    (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(mainContainer).render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Main, null));\n}\nconst classComponents = [\n    // This item load element like <div class=\"component1\" data-props=\"{}\"></div>\n    {\n        className: '.component1',\n        Component: _components_Component1__WEBPACK_IMPORTED_MODULE_2__[\"default\"],\n    },\n    {\n        className: '.component2',\n        Component: _components_Component2__WEBPACK_IMPORTED_MODULE_3__[\"default\"],\n    },\n];\nclassComponents.forEach(({ className, Component }) => {\n    const containers = document.querySelectorAll(className);\n    containers.forEach(async (container) => {\n        const props = JSON.parse(container.getAttribute('data-props'));\n        (0,react_dom_client__WEBPACK_IMPORTED_MODULE_1__.createRoot)(container).render(react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Component, { ...props }));\n    });\n});\n\n\n//# sourceURL=webpack:///./src/main.tsx?");
 
 /***/ })
 
