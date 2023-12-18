@@ -25,7 +25,7 @@ type ClassComponent = {
 };
 
 const classComponents: ClassComponent[] = [
-    // This item load element like <div class="component1" data-props="{}"></div>
+    // This item load element like <div class="component1" data-data="{}"></div>
     {
         className: '.component1',
         Component: Component1,
