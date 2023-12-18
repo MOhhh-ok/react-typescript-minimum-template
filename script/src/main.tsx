@@ -39,7 +39,7 @@ const classComponents: ClassComponent[] = [
 classComponents.forEach(({ className, Component }) => {
     const containers = document.querySelectorAll(className);
     containers.forEach(async container => {
-        const props = JSON.parse(container.getAttribute('data-props')!);
-        createRoot(container).render(<Component {...props} />);
+        const data = JSON.parse(container.getAttribute('data-data')!);
+        createRoot(container).render(<Component data={data} />);
     });
 });
